@@ -2367,4 +2367,35 @@ img {
 }
 
 
+/* .bg-light {
+    background: #f2f4fb !important;
+} */
+
+.img-absolute {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+}
+
+.img-absolute img {
+    max-width: 250px;
+    border-radius: 50%;
+    border: 10px solid #f2f4fb;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.1em;
+}
+
+.learn-more {
+    background-color: #cb8670;
+}
+
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    border-left: 2px solid #dee2e6;
+}
+
+
 /*# sourceMappingURL=style.css.map */
