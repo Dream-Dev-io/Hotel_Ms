@@ -15,6 +15,7 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
 
 </head>
@@ -33,6 +34,10 @@
     <script src="{{ asset('frontend/js/plugins/plugins.js') }}"></script>
     <!-- Active js -->
     <script src="{{ asset('frontend/js/active.js') }}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
