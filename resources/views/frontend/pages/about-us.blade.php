@@ -184,7 +184,7 @@
 
           <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7 mb-3">
-              <h2 class="heading aos-init aos-animate" style="font-weight:700; font-size:3em;" data-aos-duration="1100" data-aos="zoom-in-left">History</h2>
+              <h2 class="heading aos-init aos-animate" style="font-weight:700; font-size:3em; " data-aos-duration="1100" data-aos="zoom-in-left" > <span style="border-bottom:1px solid #cb8670;">History</span> </h2>
             </div>
           </div>
 
@@ -274,85 +274,104 @@
     </section>
     <!-- ##### Hotels Area End ##### -->
 
+
     <!-- ##### Testimonial Area Start ##### -->
-    <section class="testimonial-area section-padding-100 bg-img" style="background-image: url(img/core-img/pattern.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonial-content">
-                        <div class="section-heading text-center">
-                            <div class="line-"></div>
-                            <h2>What Clients Say</h2>
-                        </div>
-
-                        <!-- Testimonial Slides -->
-                        <div class="testimonial-slides owl-carousel">
-
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-                                <h6>Michael Smith, <span>Client</span></h6>
-                                <img src="frontend/img/core-img/trip.png" alt="">
-                            </div>
-
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-                                <h6>Nazrul Islam, <span>Developer</span></h6>
-                                <img src="frontend/img/core-img/trip.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+    <section class="section testimonial-section section-padding-75-0">
+        <div class="container-fluid">
+          <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-7 mb-3" >
+              <h2 class="heading aos-init aos-animate" style="font-weight:700; font-size:3em;" data-aos-duration="1000" data-aos="fade-up"><span class="pb-2">What People Says</span></h2>
             </div>
+          </div>
+          <div class="carousel-wrap mt-4" data-aos-duration="1300" data-aos="zoom-in-left">
+      <div class="row owl-carousel owl-theme mb-5">
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/person_1.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quisquam harum, quas magni optio aliquid impedit ad dignissimos? Eligendi odit dignissimos enim repellendus corporis alias atque repellat ipsum a pariatur?"</blockquote>
+            <span class="text-secondary">__ Jean Smith</span>
+
         </div>
-    </section>
-    <!-- ##### Testimonial Area End ##### -->
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/person_2.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis perferendis reiciendis facere aut voluptates cupiditate, quo repellendus laudantium accusamus iusto praesentium perspiciatis cumque vero quam odit rerum quibusdam expedita! Laudantium. "</blockquote>
+            <span class="text-secondary">__ John Doe</span>
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/person_3.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, non. Nisi, illum obcaecati nesciunt quaerat ducimus odio, repellendus quam deserunt inventore laboriosam temporibus rem sapiente ad eligendi exercitationem possimus perferendis. "</blockquote>
+            <span class="text-secondary">__ Bruce Allen</span>
+
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/team-1.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quisquam harum, quas magni optio aliquid impedit ad dignissimos? Eligendi odit dignissimos enim repellendus corporis alias atque repellat ipsum a pariatur?"</blockquote>
+            <span class="text-secondary">__ Gerograe</span>
+
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/team-2.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis perferendis reiciendis facere aut voluptates cupiditate, quo repellendus laudantium accusamus iusto praesentium perspiciatis cumque vero quam odit rerum quibusdam expedita! Laudantium. "</blockquote>
+            <span class="text-secondary">__ Berry </span>
+
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/team-3.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, non. Nisi, illum obcaecati nesciunt quaerat ducimus odio, repellendus quam deserunt inventore laboriosam temporibus rem sapiente ad eligendi exercitationem possimus perferendis. "</blockquote>
+            <span class="text-secondary">__ Sofia Mas</span>
+
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/team-6.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, non. Nisi, illum obcaecati nesciunt quaerat ducimus odio, repellendus quam deserunt inventore laboriosam temporibus rem sapiente ad eligendi exercitationem possimus perferendis. "</blockquote>
+            <span class="text-secondary">__ Fransis</span>
+
+        </div>
+        <div class=" text-center item">
+            <img src="frontend/img/blog-img/girl.jpg" class=" testimonial-img img-fluid mx-auto" alt="">
+            <blockquote class="mt-3 mx-2 py-2 px-4">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, non. Nisi, illum obcaecati nesciunt quaerat ducimus odio, repellendus quam deserunt inventore laboriosam temporibus rem sapiente ad eligendi exercitationem possimus perferendis. "</blockquote>
+            <span class="text-secondary">__ Diana Auro</span>
+
+        </div>
+
+      </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ##### Testimonial Area end ##### -->
+
+    <!-- ##### Certificate Area end ##### -->
+
+    <div class="about" style="padding: 70px 0; background:#f2f4fb" >
+		<div class="container">
+			<div class="row">
+
+				<!-- About Content -->
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="about_title"><h2>The River / 10 years of excellence</h2></div>
+						<div class="about_text">
+							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum lacus suscipit sit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum lacus suscipit sit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- About Images -->
+				<div class="col-lg-6">
+					<div class="about_images d-flex flex-row align-items-center justify-content-between flex-wrap">
+						<img src="frontend/img/core-img/about_1.png" alt="">
+						<img src="frontend/img/core-img/about_2.png" alt="">
+						<img src="frontend/img/core-img/about_3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- ##### Certificate Area end ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-lg-5">
-                    <div class="footer-widget-area mt-50">
-                        <a href="#" class="d-block mb-5"><img src="frontend/img/core-img/logo.png" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Find us on the map</h6>
-                        <img src="frontend/img/bg-img/footer-map.png" alt="">
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-                        <form action="#" method="post" class="subscribe-form">
-                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Your E-mail">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Copywrite Text -->
-                <div class="col-12">
-                    <div class="copywrite-text mt-30">
-                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('frontend.layouts.footer')
     <!-- ##### Footer Area End ##### -->
 
 @endsection

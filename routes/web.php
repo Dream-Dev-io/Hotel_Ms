@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 
 Route::view('about-us','frontend.pages.about-us')->name('about-us');
+Route::view('gallery','frontend.pages.gallery')->name('gallery');
+Route::view('rooms','frontend.pages.rooms')->name('rooms');
+
 
 
 Auth::routes();

@@ -27,8 +27,9 @@
                         <div class="classynav">
                             <ul>
                                 <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="#">Rooms</a></li>
+                                <li><a href="{{ route('rooms') }}">Rooms</a></li>
                                 <li><a href="services.html">Services & Facilities</a></li>
+                                <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
