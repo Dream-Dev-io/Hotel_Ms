@@ -2363,8 +2363,269 @@ img {
 
 .gallery .gallery_img {
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* .bg-light {
+    background: #f2f4fb !important;
+} */
+
+.img-absolute {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+}
+
+.img-absolute img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 10px solid #f2f4fb;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.1em;
+}
+
+.learn-more {
+    background-color: #cb8670;
+}
+
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    border-left: 2px solid #cb8670;
+}
+
+.timeline-item::before {
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    top: 1em;
+    display: block;
+    font-weight: 700;
+    font-size: 0.785rem;
+}
+
+.timeline-item::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -6px;
+    border-radius: 10px;
+    content: "";
+    border: 2px solid #cb8670;
+    background: white;
+}
+
+.testimonial-img {
+    width: 70px !important;
+    /* display: block; */
+    border-radius: 50%;
+}
+
+blockquote {
+    text-align: justify;
+    color: #616161;
+    font-size: 1.2em;
+    font-weight: 300;
+    word-spacing: 1px;
+}
+
+.carousel-wrap {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .own-nav,
+    .nav-btn {
+        display: none;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.owl-carousel .owl-nav {
+    overflow: hidden;
+    height: 0px;
+}
+
+.owl-dots .owl-dot.active span {
+    background: #cb8670 !important;
+}
+
+.owl-dots {
+    margin-top: 20px !important;
+}
+
+.owl-carousel .item {
+    text-align: center;
+}
+
+.owl-carousel .nav-btn {
+    height: 55px;
+    position: absolute;
+    width: 55px;
+    cursor: pointer;
+    top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+    background: url(img/bg-img/back.png) no-repeat scroll 0 0;
+    left: -57px;
+}
+
+.owl-carousel .next-slide {
+    background: url(img/bg-img/next.png) no-repeat scroll 0px 0px;
+    right: -87px;
+}
+
+blockquote:hover {
+    color: #cb8670;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #cb8670;
+}
+
+.nav-pills .nav-item {
+    margin: 0px 1px;
+}
+
+
+/* .grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+} */
+
+.button-group {
+    margin: 40px auto;
+    display: table;
+}
+
+.button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    background-color: #eee;
+    margin: 0 3px;
+}
+
+.button:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.button.is-checked {
+    background: #cb8670;
+    color: #fff;
+}
+
+.element-item {
+    /* background-color: #fff; */
+    padding: 0px 5px !important;
+    /* margin: 4px 8px; */
+    /* width: 23%; */
+    /* display: inline-block; */
+}
+
+
+/* .item-image {
+    width: 100%;
+    padding-bottom: 50%;
+    background-size: cover;
+} */
+
+.gallery-about {
+    margin: 0px 80px !important;
+    height: auto !important;
+    padding: 70px 0;
+    /* background-color: red; */
+    /* clear: both; */
+}
+
+.clear-fix {
+    zoom: 1;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.content-box-lg {
+    height: auto;
+    padding: 60px 0;
 }
 
 
 /*# sourceMappingURL=style.css.map */
+
+.card-custom {
+    overflow: hidden;
+    min-height: 550px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    height: 300px;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+
+/* First border-left-width setting is a fallback */
+
+.card-custom-img::after {
+    position: absolute;
+    content: "";
+    top: 261px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    position: absolute;
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+}
