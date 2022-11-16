@@ -2,8 +2,13 @@
 
 @section('content')
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>If You Are New To Hotel Ms, Please Register First</strong>  <a class="mx-3 btn btn-info" href="{{ route('register') }}">{{ __('Create An Account') }}</a>
+
+              </div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
