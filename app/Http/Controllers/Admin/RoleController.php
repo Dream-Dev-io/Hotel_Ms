@@ -15,7 +15,7 @@ class  RoleController  extends  Controller
 
         if ($request->ajax()) {
 
-            $roles = Role::whereNotIn('name',['admin'])->get();
+            $roles = Role::all();
 
             return Datatables::of($roles)
                     ->addIndexColumn()

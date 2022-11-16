@@ -6,23 +6,79 @@ use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Yajra\Datatables\Datatables;
+
 
 
 class  UserController  extends  Controller
 {
 
-	public  function  index(){
-		$users=  User::all();
-		return  view('admin.users.index',compact('users'))->with('no', 1);
-	}
+	public function index(Request $request)
+    {
+
+        if ($request->ajax()) {
+
+            $users= User::all();
+
+
+            return Datatables::of($users)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+
+                           $btn = ' <a href="javascript:void(0)" style="font-family: \'Source Serif Pro\', serif;" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-outline-warning roleUser py-2 mr-4" ><i class="mdi mdi-wrench  "></i>Assign Roles & Permission</a>';
+
+                           $btn = $btn.' <a href="javascript:void(0)" style="font-family: \'Source Serif Pro\', serif;" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-outline-danger deleteUser py-2 " ><i class="mdi mdi-delete mr-1 "></i>Delete</a>' ;
+
+                            return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+
+        return view('backend.pages.users.index');
+    }
 
 
 
-	public  function  show(User  $user){
-		$roles  =  Role::all();
-		$permissions  =  Permission::all();
-		return  view('admin.users.role',compact('user','roles','permissions'));
-	}
+
+
+
+
+    public function store(Request $request)
+    {
+        User::updateOrCreate([
+                    'id' => $request->user_id
+                ],
+                [
+                    'name' => $request->name,
+                    'email'=>$request->email
+                ]);
+        return response()->json(['success'=>'User saved successfully.']);
+    }
+
+
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        if($user->hasRole('Admin')){
+
+        return response()->json(['status'=> 'warning' ,'message'=>'Admin role cannot be deleted.']);
+
+        }
+
+        $user->delete();
+
+        return response()->json(['success'=>'User deleted successfully.']);
+    }
+
+
+    public function show(User $user){
+        $roles = Role::all();
+        $permissions = Permission::all();
+        return view('backend.pages.users.role',compact('user','roles','permissions'));
+    }
+
+
 
 
 
@@ -72,13 +128,13 @@ class  UserController  extends  Controller
 
 
 
-	public  function  destroy(User  $user){
-		if($user->hasRole('Admin')){
-			Alert::warning('Cannot Delete',"Because You are an admin !");
-			return  back();
-		}
-		$user->delete();
-		return  back()->with('status',"$user->name has been deleted");
-	}
+	// public  function  destroy(User  $user){
+	// 	if($user->hasRole('Admin')){
+	// 		Alert::warning('Cannot Delete',"Because You are an admin !");
+	// 		return  back();
+	// 	}
+	// 	$user->delete();
+	// 	return  back()->with('status',"$user->name has been deleted");
+	// }
 
 }

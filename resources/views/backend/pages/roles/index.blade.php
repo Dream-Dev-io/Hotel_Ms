@@ -16,7 +16,7 @@
         <h1 class="text-primary text-center mx-auto " style="font-family: 'Source Serif Pro', serif;">Roles</h1>
 
         <a class="btn col-md-2 offset-md-1 py-2 my-3 btn-primary btn-icon-text" href="javascript:void(0)" id="createNewRole"><i class="mdi mdi-plus-one btn-icon-prepend mr-1 "></i>Create New</a>
-        <div class="mx-auto  col-md-10 p-3 card border" >
+        <div class="mx-auto  col-md-10 p-3 card border" style="overflow-x:auto;" >
             <table class="table data-table  text-white">
                 <thead>
                     <tr>

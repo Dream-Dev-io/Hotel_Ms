@@ -2,6 +2,7 @@
 
 @section('content')
 <div>
+
     <x-bread-crumb>
         <x-slot name="title">
             Permissions
@@ -12,11 +13,12 @@
             <li class="breadcrumb-item active" aria-current="page">View All</li>
     </x-bread-crumb>
 
+
     <div class="container card py-3">
         <h1 class="text-primary text-center mx-auto " style="font-family: 'Source Serif Pro', serif;">Permissions</h1>
 
         <a class="btn col-md-2 offset-md-1 py-2 my-3 btn-primary btn-icon-text" href="javascript:void(0)" id="createNewPermission"><i class="mdi mdi-plus-one btn-icon-prepend mr-1 "></i>Create New</a>
-        <div class="mx-auto  col-md-10 p-3 card border" >
+        <div class="mx-auto  col-md-10 p-3 card border" style="overflow-x:auto;">
             <table class="table data-table  text-white">
                 <thead>
                     <tr>
@@ -32,6 +34,7 @@
         </div>
     </div>
 </div>
+
 
 {{-- create form modal --}}
 <div class="modal fade" id="ajaxModel" aria-hidden="true">
@@ -88,8 +91,10 @@
       --------------------------------------------
       --------------------------------------------*/
       let permission_table = $('.data-table').DataTable({
+          responsive: true,
           processing: true,
           serverSide: true,
+
           ajax: "{{ route('admin.permissions.index') }}",
           columns: [
               {data: 'DT_RowIndex', name: 'DT_RowIndex'},

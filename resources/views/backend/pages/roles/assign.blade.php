@@ -1,10 +1,20 @@
 @extends('backend.layouts.app')
 
 @section('content')
+<x-bread-crumb>
+    <x-slot name="title">
+        Roles
+    </x-slot>
+    <li class="breadcrumb-item"><a href="#">
+        Roles
+    </a></li>
+        <li class="breadcrumb-item active" aria-current="page">View All</li>
+</x-bread-crumb>
+
 <div class="my-5 mx-4 card py-3 pl-4 pr-3 ">
 <a href="{{ route('admin.roles.index') }}" class="btn col-md-2  py-2 my-3 btn-primary"> <i class="fa fa-plus mr-1 "></i>All Permissions</a>
 
-    <h3 class="text-primary text-center">ASSINGING ROLES</h3>
+    <h3 class="text-primary text-center">ASSINGING PERMISSIONS</h3>
     <div class="row mt-4 mx-4  px-4 pt-4 pb-2 neu-container ">
         @if($role->permissions)
             @foreach($role->permissions as $role_permission)
