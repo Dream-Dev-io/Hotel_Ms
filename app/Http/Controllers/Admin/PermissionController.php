@@ -83,7 +83,8 @@ class  PermissionController  extends  Controller
 		$permission->assignRole($request->role);
 		// Alert::success('Role Added Successfully', "'$request->role' added");
 
-        return response()->json(['success'=>'Role added successfully.']);
+        Alert::success('Role Added Successfully', "'$request->role' added");
+        return back();
 
 		// return  back();
 	}

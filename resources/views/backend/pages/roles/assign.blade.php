@@ -26,9 +26,9 @@
     <div class="mt-5">
         <form class="col-md-8 neu p-5 mx-auto" method="POST" action="{{ route('admin.roles.permissions', $role->id) }}">
         @csrf
-        <div class="form-group text-dark">
+        <div class="form-group text-white">
       <label for="permission">Permission</label>
-      <select class="form-control neu-down"  name="permission" >
+      <select class="form-control text-white"  name="permission" >
         @foreach($permissions as $permission)
             <option value="{{ $permission->name }}">{{ $permission->name }}</option>
         @endforeach
