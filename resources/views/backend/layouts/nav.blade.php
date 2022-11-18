@@ -169,19 +169,33 @@
                 <p class="preview-subject mb-1">Settings</p>
               </div>
             </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item preview-item">
+            {{-- <div class="dropdown-divider"></div> --}}
+            {{-- <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-dark rounded-circle">
                   <i class="mdi mdi-logout text-danger"></i>
                 </div>
-              </div>
-              <div class="preview-item-content">
-                <p class="preview-subject mb-1">Log out</p>
-              </div>
+              </div> --}}
+              {{-- <div class="preview-item-content">
+                <p class="preview-subject mb-1"> </p>
+
+              </div> --}}
             </a>
             <div class="dropdown-divider"></div>
-            <p class="p-3 mb-0 text-center">Advanced settings</p>
+            <p class="pt-3 mb-0 text-white text-center">
+
+
+                <a  class="dropdown-item preview-item" href="{{ route('security.admin.logout') }}"  style="color: white !important;"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                    <i class="mdi mdi-logout text-danger mx-3  float-left "></i>
+                    {{ __('Logout') }}
+             </a>
+
+             <form id="logout-form" action="{{ route('security.admin.logout') }}" method="POST" class="d-none">
+                 @csrf
+             </form>
+            </p>
           </div>
         </li>
       </ul>

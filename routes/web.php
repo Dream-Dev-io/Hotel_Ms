@@ -5,7 +5,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\AjaxTestController;
+use App\Http\Controllers\Auth\AdminLoginController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,26 +30,72 @@ Route::get('/admin',function(){
 })->middleware(['auth','role:Admin'])->name('admin.index');
 
 
+// Route::middleware(['auth:admin_user'])->group(function(){
 
-Route::middleware(['auth','role:Admin'])->name('admin.')->prefix('admin')->group(function(){
-	Route::get('/dashboard', [AdminController::class,'index'])->name('index');
-	Route::resource('/roles',RoleController::class);
-	Route::get('/roles/showpermissions/{role}',[RoleController::class,'showAssign'])->name('roles.showAssign');
-	Route::post('/roles/{role}/permissions',[RoleController::class,'givePermission'])->name('roles.permissions');
-	Route::delete('/roles/{role}/permissions/{permission}',[RoleController::class,'revokePermission'])->name('roles.permissions.revoke');
-	Route::resource('/permissions',PermissionController::class);
-	Route::get('/permissions/showroles/{permission}',[PermissionController::class,'showAssign'])->name('permissions.showAssign');
-	Route::post('/permissions/{permission}/roles',[PermissionController::class,'assignRole'])->name('permissions.roles');
-	Route::delete('/permissions/{permission}/roles/{role}',[PermissionController::class,'removeRole'])->name('permissions.roles.remove');
-	Route::get('/users',[UserController::class,'index'])->name('users.index');
-	Route::post('/users',[UserController::class,'store'])->name('users.store');
-	Route::get('/users/{user}',[UserController::class,'show'])->name('users.show');
-	Route::delete('/users/{user}',[UserController::class,'destroy'])->name('users.destroy');
-	Route::post('/users/{user}/roles',[UserController::class,'assignRole'])->name('users.roles');
-	Route::delete('/users/{user}/roles/{role}',[UserController::class,'removeRole'])->name('users.roles.remove');
-	Route::post('/users/{user}/permissions',[UserController::class,'givePermission'])->name('users.permissions');
-	Route::delete('/users/{user}/permissions/{permission}',[UserController::class,'revokePermission'])->name('users.permissions.revoke');
+//     Route::get('/any',function(){
+//         return 'authenticated';
+//     });
+// });
+
+
+// Route::middleware(['auth','role:Admin'])->name('admin.')->prefix('admin')->group(function(){
+
+//     Route::get('/login',[AdminLoginController::class,'showLoginForm']);
+//     Route::post('/login',[AdminLoginController::class,'login'])->name('admin.panel.login');
+// 	Route::get('/dashboard', [AdminController::class,'index'])->name('index');
+// 	Route::resource('/roles',RoleController::class);
+// 	Route::get('/roles/showpermissions/{role}',[RoleController::class,'showAssign'])->name('roles.showAssign');
+// 	Route::post('/roles/{role}/permissions',[RoleController::class,'givePermission'])->name('roles.permissions');
+// 	Route::delete('/roles/{role}/permissions/{permission}',[RoleController::class,'revokePermission'])->name('roles.permissions.revoke');
+// 	Route::resource('/permissions',PermissionController::class);
+// 	Route::get('/permissions/showroles/{permission}',[PermissionController::class,'showAssign'])->name('permissions.showAssign');
+// 	Route::post('/permissions/{permission}/roles',[PermissionController::class,'assignRole'])->name('permissions.roles');
+// 	Route::delete('/permissions/{permission}/roles/{role}',[PermissionController::class,'removeRole'])->name('permissions.roles.remove');
+// 	Route::get('/users',[UserController::class,'index'])->name('users.index');
+// 	Route::post('/users',[UserController::class,'store'])->name('users.store');
+// 	Route::get('/users/{user}',[UserController::class,'show'])->name('users.show');
+// 	Route::delete('/users/{user}',[UserController::class,'destroy'])->name('users.destroy');
+// 	Route::post('/users/{user}/roles',[UserController::class,'assignRole'])->name('users.roles');
+// 	Route::delete('/users/{user}/roles/{role}',[UserController::class,'removeRole'])->name('users.roles.remove');
+// 	Route::post('/users/{user}/permissions',[UserController::class,'givePermission'])->name('users.permissions');
+// 	Route::delete('/users/{user}/permissions/{permission}',[UserController::class,'revokePermission'])->name('users.permissions.revoke');
+// });
+
+
+Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->prefix('admin')->group(function(){
+
+        Route::get('/any',function(){
+            return Auth::guard('web')->user();
+        });
+
+    Route::get('/dashboard', [AdminController::class,'index'])->name('index');
+    Route::resource('/roles',RoleController::class);
+    Route::get('/roles/showpermissions/{role}',[RoleController::class,'showAssign'])->name('roles.showAssign');
+    Route::post('/roles/{role}/permissions',[RoleController::class,'givePermission'])->name('roles.permissions');
+    Route::delete('/roles/{role}/permissions/{permission}',[RoleController::class,'revokePermission'])->name('roles.permissions.revoke');
+    Route::resource('/permissions',PermissionController::class);
+    Route::get('/permissions/showroles/{permission}',[PermissionController::class,'showAssign'])->name('permissions.showAssign');
+    Route::post('/permissions/{permission}/roles',[PermissionController::class,'assignRole'])->name('permissions.roles');
+    Route::delete('/permissions/{permission}/roles/{role}',[PermissionController::class,'removeRole'])->name('permissions.roles.remove');
+    Route::get('/users',[UserController::class,'index'])->name('users.index');
+    Route::post('/users',[UserController::class,'store'])->name('users.store');
+    Route::get('/users/{user}',[UserController::class,'show'])->name('users.show');
+    Route::delete('/users/{user}',[UserController::class,'destroy'])->name('users.destroy');
+    Route::post('/users/{user}/roles',[UserController::class,'assignRole'])->name('users.roles');
+    Route::delete('/users/{user}/roles/{role}',[UserController::class,'removeRole'])->name('users.roles.remove');
+    Route::post('/users/{user}/permissions',[UserController::class,'givePermission'])->name('users.permissions');
+    Route::delete('/users/{user}/permissions/{permission}',[UserController::class,'revokePermission'])->name('users.permissions.revoke');
 });
+
+
+
+    Route::middleware(['auth','role:Admin'])->name('security.')->prefix('security')->group(function(){
+
+        Route::get('/login',[AdminLoginController::class,'showLoginForm']);
+        Route::post('/login',[AdminLoginController::class,'login'])->name('admin.login');
+        Route::post('/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
+    });
+
 
 
 
