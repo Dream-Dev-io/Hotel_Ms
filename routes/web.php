@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\LangController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +23,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('frontend.pages.home');
 });
 
+// Route::get('lang/home', [LangController::class, 'index']);
+Route::get('lang/change/{lang}', [LangController::class, 'change'])->name('changeLang');
 
 Route::get('/admin',function(){
 	return  view('backend.pages.home');
@@ -91,13 +96,14 @@ Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->
 
     Route::middleware(['auth','role:Admin'])->name('security.')->prefix('security')->group(function(){
 
-        Route::get('/login',[AdminLoginController::class,'showLoginForm']);
+        Route::get('/login',[AdminLoginController::class,'showLoginForm'])->name('admin.loginui');
         Route::post('/login',[AdminLoginController::class,'login'])->name('admin.login');
         Route::post('/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
     });
 
 
 
+    // Route::view('test/login','frontend.layouts.login')->name('test.login');
 
 Route::view('about-us','frontend.pages.about-us')->name('about-us');
 Route::view('gallery','frontend.pages.gallery')->name('gallery');

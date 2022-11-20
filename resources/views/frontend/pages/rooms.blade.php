@@ -814,6 +814,8 @@
 .card-d:hover .additional {
     width: 100%;
     border-radius: 0 5px 5px 0;
+    transition: all 2s;
+
 }
 
 .card-d .additional .user-card-d {

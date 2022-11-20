@@ -3,12 +3,12 @@
     <!-- Navbar Area -->
     <div class="palatin-main-menu">
         <div class="classy-nav-container breakpoint-off">
-            <div class="container">
+            <div class="container-fluid">
                 <!-- Menu -->
                 <nav class="classy-navbar justify-content-between" id="palatinNav">
 
                     <!-- Nav brand -->
-                    <a href="index.html" class="nav-brand"><img src="{{ asset('frontend/img/core-img/logo.png') }}" alt=""></a>
+                    <a href="index.html" class="nav-brand ml-2"><img src="{{ asset('frontend/img/core-img/logo.png') }}" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -26,16 +26,16 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="{{ route('rooms') }}">Rooms</a></li>
-                                <li><a href="{{ route('about-us') }}">Restruant Menu</a></li>
-                                <li><a href="#">About Us</a>
+                                <li class="active"><a href="index.html">{{ __('index.Home') }}</a></li>
+                                <li><a href="{{ route('rooms') }}">{{ __('index.Rooms') }}</a></li>
+                                <li><a href="{{ route('about-us') }}">{{ __('index.Restruant Menu') }}</a></li>
+                                <li><a href="#">{{ __('index.About Us') }}</a>
                                     <ul class="dropdown">
-                                        <li><a href="{{ route('about-us') }}">Our Profile</a></li>
-                                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                                        <li><a href="{{ route('about-us') }}">{{ __('index.Profile') }}</a></li>
+                                        <li><a href="{{ route('gallery') }}">{{ __('index.Gallery') }}</a></li>
 
-                                        <li><a href="{{ route('services') }}">Services & Facilities</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{ route('services') }}">{{ __('index.Services & Facilities') }}</a></li>
+                                        <li><a href="{{ route('services') }}">{{ __('index.Contact') }}</a></li>
 
                                     </ul>
                                 </li>
@@ -46,11 +46,39 @@
 
 
                             </ul>
-                            <div class="menu-btn ">
-                                <a href="#" class="btn palatin-btn">Make a Reservation</a>
+
+
+                            <div class="menu-btn mr-2 ">
+                                <a href="#" class="btn palatin-btn">{{ __('index.Make Reservation') }}</a>
                             </div>
 
-                            <div class="classynav ">
+
+
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="#">
+                                        @if ( session()->get('locale') == 'en')
+                                            English
+                                        @elseif( session()->get('locale') == 'mm')
+                                            မြန်မာ
+                                        @elseif( session()->get('locale') == 'jp')
+                                            日本
+                                        @else
+                                            English
+                                        @endif
+                                </a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ route('changeLang',['lang' => 'en']) }}">English</a></li>
+                                        <li><a href="{{ route('changeLang',['lang' => 'mm']) }}">Myanmar</a></li>
+                                        <li><a href="{{ route('changeLang',['lang' => 'jp']) }}">Japan</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="classynav mr-3 ">
                                 <ul>
                                     @guest
                                     @if (Route::has('login'))
@@ -71,8 +99,8 @@
                                     <ul class="dropdown">
                                         <li>@role('Admin')
                                             <a
-                                            href="{{route('admin.index')}}">
-                                                {{  __('Admin Dashboard') }}
+                                            href="{{route('security.admin.loginui')}}">
+                                                {{  __('Dashboard') }}
                                             </a>
                                         @endrole</li>
                                         <li><a class="dropdown-item" href="{{ route('logout') }}"
