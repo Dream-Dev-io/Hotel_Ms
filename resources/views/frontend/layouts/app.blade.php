@@ -15,14 +15,15 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.min.css') }}">
     @stack('css')
+
 </head>
 
 <body>
@@ -31,6 +32,7 @@
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="{{ asset('frontend/js/jquery/jquery-2.2.4.min.js') }}"></script>
     <!-- Popper js -->
     <script src="{{ asset('frontend/js/bootstrap/popper.min.js') }}"></script>
@@ -125,6 +127,8 @@ function radioButtonGroup( buttonGroup ) {
 }
 
       </script>
+
+@stack('js')
 </body>
 
 </html>

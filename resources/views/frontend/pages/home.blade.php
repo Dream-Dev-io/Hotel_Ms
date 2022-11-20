@@ -23,7 +23,7 @@
                         <!-- Slide Content -->
                         <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                             <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                            <h2 data-animation="fadeInUp" data-delay="500ms">The Vacation Heaven</h2>
+                            <h2 data-animation="fadeInUp" data-delay="500ms" class="mb-2">{{ __('index.Home1Title') }}</h2>
                             <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
                             <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
                         </div>
@@ -42,7 +42,7 @@
                         <!-- Slide Content -->
                         <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                             <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                            <h2 data-animation="fadeInUp" data-delay="500ms">A place to remember</h2>
+                            <h2 data-animation="fadeInUp" data-delay="500ms" class="mb-2">{{ __('index.Home2Title') }}</h2>
                             <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
                             <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
                         </div>
@@ -61,7 +61,7 @@
                         <!-- Slide Content -->
                         <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                             <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                            <h2 data-animation="fadeInUp" data-delay="500ms">Enjoy your life</h2>
+                            <h2 data-animation="fadeInUp" data-delay="500ms" class="mb-2">{{ __('index.Home3Title') }}</h2>
                             <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
                             <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
                         </div>
