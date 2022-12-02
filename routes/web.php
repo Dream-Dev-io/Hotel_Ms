@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-
+use App\Http\Controllers\Admin\FacebookController;
+use App\Http\Controllers\Admin\GoogleController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     return view('frontend.pages.home');
-});
+})->name('home');
 
 // Route::get('lang/home', [LangController::class, 'index']);
 Route::get('lang/change/{lang}', [LangController::class, 'change'])->name('changeLang');
@@ -110,6 +111,8 @@ Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->
 
 
 
+
+
     Route::middleware(['auth','role:Admin'])->name('security.')->prefix('security')->group(function(){
 
         Route::get('/login',[AdminLoginController::class,'showLoginForm'])->name('admin.loginui');
@@ -131,4 +134,14 @@ Route::view('services','frontend.pages.services')->name('services');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::controller(FacebookController::class)->group(function(){
+    Route::get('auth/facebook', 'redirectToFacebook')->name('auth.facebook');
+    Route::get('auth/facebook/callback', 'handleFacebookCallback');
+});
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
