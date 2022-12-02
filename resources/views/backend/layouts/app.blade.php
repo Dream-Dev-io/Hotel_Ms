@@ -37,7 +37,7 @@
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('backend/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/vendors/css/vendor.bundle.base.css') }}">
-
+    {{-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> --}}
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,6 +58,8 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.33/dist/sweetalert2.min.css" rel="stylesheet" />
 
     @stack('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}" />
   </head>
@@ -87,6 +89,7 @@
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.1/filtering/row-based/range_numbers.js"></script>
     <script src="{{ asset('backend/vendors/chart.js/Chart.min.js') }}"></script>
     <script src="{{ asset('backend/vendors/progressbar.js/progressbar.min.js') }}"></script>
     <script src="{{ asset('backend/vendors/jvectormap/jquery-jvectormap.min.js') }}"></script>

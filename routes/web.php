@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\LangController;
+use App\Http\Controllers\Admin\pages\RoomController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -69,9 +71,9 @@ Route::get('/admin',function(){
 
 Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->prefix('admin')->group(function(){
 
-        Route::get('/any',function(){
-            return Auth::guard('web')->user();
-        });
+        // Route::get('/any',function(){
+        //     return Auth::guard('web')->user();
+        // });
 
     Route::get('/dashboard', [AdminController::class,'index'])->name('index');
     Route::resource('/roles',RoleController::class);
@@ -90,6 +92,20 @@ Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->
     Route::delete('/users/{user}/roles/{role}',[UserController::class,'removeRole'])->name('users.roles.remove');
     Route::post('/users/{user}/permissions',[UserController::class,'givePermission'])->name('users.permissions');
     Route::delete('/users/{user}/permissions/{permission}',[UserController::class,'revokePermission'])->name('users.permissions.revoke');
+
+
+
+
+
+    Route::resource('/rooms',RoomController::class);
+
+
+
+
+
+    // Route::post('/rooms/view',[RoomController::class,'findRoomType'])->name('rooms.type');
+
+
 });
 
 
@@ -115,4 +131,4 @@ Route::view('services','frontend.pages.services')->name('services');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
