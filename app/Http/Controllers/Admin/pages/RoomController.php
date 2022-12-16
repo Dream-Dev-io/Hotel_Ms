@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\pages;
 use App\Http\Controllers\Controller;
 use App\Models\Facility;
 use App\Models\Room;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -31,17 +32,20 @@ class RoomController extends Controller
                     ->make(true);
         }
 
-        return view('backend.pages.rooms.test');
+        return view('backend.pages.rooms.index');
     }
 
 
     public function show(Room $room){
-        return view('backend.pages.rooms.show',compact('room'));
+        $facilities = Facility::all();
+        $services = Service::all();
+
+        return view('backend.pages.rooms.show',compact('room','facilities','services'));
     }
+
 
     public function findRoomType(Request $request)
     {
-
             $roles = Room::where('type',$request->selectRoom)->get();
             return response()->json($roles);
 

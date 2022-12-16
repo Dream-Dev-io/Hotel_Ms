@@ -20,4 +20,8 @@ class Room extends Model
         return $this->belongsToMany(Facility::class);
     }
 
+    public function services(){
+        return $this->belongsToMany(Service::class);
+    }
+
 }

@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\LangController;
 use App\Http\Controllers\Admin\pages\RoomController;
+use App\Http\Controllers\Admin\pages\FacilityController;
+use App\Http\Controllers\Admin\pages\ServiceController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -99,6 +101,9 @@ Route::middleware(['auth:admin_user','auth:web','role:Admin'])->name('admin.')->
 
 
     Route::resource('/rooms',RoomController::class);
+    Route::resource('/facility',FacilityController::class);
+    Route::post('/rooms/{room}/facility/add',[FacilityController::class,'addFacility']);
+    Route::post('/rooms/{room}/service/add',[ServiceController::class,'addService']);
 
 
 

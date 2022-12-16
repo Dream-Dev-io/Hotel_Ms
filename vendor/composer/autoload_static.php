@@ -16,15 +16,16 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
@@ -102,6 +103,7 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         ),
         'P' => 
         array (
+            'Pusher\\' => 7,
             'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
@@ -174,6 +176,7 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'C' => 
         array (
             'Cron\\' => 5,
+            'Chatify\\' => 8,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -355,6 +358,10 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'Ramsey\\Collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
+        'Pusher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pusher/pusher-php-server/src',
         ),
         'Psy\\' => 
         array (
@@ -541,6 +548,10 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Chatify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/munafio/chatify/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -571,9 +582,16 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
     );
 
     public static $classMap = array (
+        'App\\Actions\\Fortify\\CreateNewUser' => __DIR__ . '/../..' . '/app/Actions/Fortify/CreateNewUser.php',
+        'App\\Actions\\Fortify\\PasswordValidationRules' => __DIR__ . '/../..' . '/app/Actions/Fortify/PasswordValidationRules.php',
+        'App\\Actions\\Fortify\\ResetUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/ResetUserPassword.php',
+        'App\\Actions\\Fortify\\UpdateUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserPassword.php',
+        'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\FacebookController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/FacebookController.php',
+        'App\\Http\\Controllers\\Admin\\GoogleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/GoogleController.php',
         'App\\Http\\Controllers\\Admin\\PermissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PermissionController.php',
         'App\\Http\\Controllers\\Admin\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/RoleController.php',
         'App\\Http\\Controllers\\Admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UserController.php',
@@ -610,6 +628,7 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\FortifyServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FortifyServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\BreadCrumb' => __DIR__ . '/../..' . '/app/View/Components/BreadCrumb.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -767,6 +786,13 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Carbon\\TranslatorImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
         'Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
+        'Chatify\\ChatifyMessenger' => __DIR__ . '/..' . '/munafio/chatify/src/ChatifyMessenger.php',
+        'Chatify\\ChatifyServiceProvider' => __DIR__ . '/..' . '/munafio/chatify/src/ChatifyServiceProvider.php',
+        'Chatify\\Console\\InstallCommand' => __DIR__ . '/..' . '/munafio/chatify/src/Console/InstallCommand.php',
+        'Chatify\\Console\\PublishCommand' => __DIR__ . '/..' . '/munafio/chatify/src/Console/PublishCommand.php',
+        'Chatify\\Facades\\ChatifyMessenger' => __DIR__ . '/..' . '/munafio/chatify/src/Facades/ChatifyMessenger.php',
+        'Chatify\\Http\\Controllers\\Api\\MessagesController' => __DIR__ . '/..' . '/munafio/chatify/src/Http/Controllers/Api/MessagesController.php',
+        'Chatify\\Http\\Controllers\\MessagesController' => __DIR__ . '/..' . '/munafio/chatify/src/Http/Controllers/MessagesController.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -4574,6 +4600,13 @@ class ComposerStaticInitfe342f857b18bedecfa8ecc52337535a
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'Pusher\\ApiErrorException' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/ApiErrorException.php',
+        'Pusher\\Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/Pusher.php',
+        'Pusher\\PusherCrypto' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherCrypto.php',
+        'Pusher\\PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherException.php',
+        'Pusher\\PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherInstance.php',
+        'Pusher\\PusherInterface' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherInterface.php',
+        'Pusher\\Webhook' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/Webhook.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',
