@@ -1,26 +1,467 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>The Palatin - Hotel &amp; Resort Template</title>
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <h1> Let's start together ! </h1>
-    </body>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="cssload-container">
+            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="palatin-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="palatinNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="{{ asset('frontend/img/core-img/logo.png') }}" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="#">Services</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li><a href="blog.html">News</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <!-- Button -->
+                                <div class="menu-btn">
+                                    <a href="#" class="btn palatin-btn">Make a Reservation</a>
+                                </div>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url({{ asset('frontend/img/bg-img/bg-1.jpg') }});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <!-- Slide Content -->
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">The Vacation Heaven</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                                <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url({{ asset('frontend/img/bg-img/bg-2.jpg') }});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <!-- Slide Content -->
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">A place to remember</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                                <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url({{ asset('frontend/img/bg-img/bg-3.jpg') }});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <!-- Slide Content -->
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">Enjoy your life</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                                <a href="#" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Book Now Area Start ##### -->
+    <div class="book-now-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="book-now-form">
+                        <form action="#">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="select1">Check In</label>
+                                <select class="form-control" id="select1">
+                                  <option>19 June</option>
+                                  <option>20 June</option>
+                                  <option>21 June</option>
+                                  <option>22 June</option>
+                                  <option>23 June</option>
+                                  <option>24 June</option>
+                                  <option>25 June</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="select2">Check Out</label>
+                                <select class="form-control" id="select2">
+                                  <option>20 June</option>
+                                  <option>21 June</option>
+                                  <option>22 June</option>
+                                  <option>23 June</option>
+                                  <option>24 June</option>
+                                  <option>25 June</option>
+                                  <option>26 June</option>
+                                  <option>27 June</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="select3">Adults</label>
+                                <select class="form-control" id="select3">
+                                  <option>02</option>
+                                  <option>03</option>
+                                  <option>04</option>
+                                  <option>05</option>
+                                  <option>06</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="select4">Childrens</label>
+                                <select class="form-control" id="select4">
+                                  <option>01</option>
+                                  <option>02</option>
+                                  <option>03</option>
+                                  <option>04</option>
+                                  <option>05</option>
+                                </select>
+                            </div>
+
+                            <!-- Button -->
+                            <button type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Book Now Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-lg-6">
+                    <div class="about-text text-center mb-100">
+                        <div class="section-heading text-center">
+                            <div class="line-"></div>
+                            <h2>A place to remember</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                        <div class="about-key-text">
+                            <h6><span class="fa fa-check"></span> Donec malesuada lorem maximus mauris sceleri</h6>
+                            <h6><span class="fa fa-check"></span> Malesuada lorem maximus mauris sceleri</h6>
+                        </div>
+                        <a href="#" class="btn palatin-btn mt-50">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="about-thumbnail homepage mb-100">
+                        <!-- First Img -->
+                        <div class="first-img wow fadeInUp" data-wow-delay="100ms">
+                            <img src="{{ asset('frontend/img/bg-img/5.jpg') }}" alt="">
+                        </div>
+                        <!-- Second Img -->
+                        <div class="second-img wow fadeInUp" data-wow-delay="300ms">
+                            <img src="{{ asset('frontend/img/bg-img/6.jpg') }}" alt="">
+                        </div>
+                        <!-- Third Img-->
+                        <div class="third-img wow fadeInUp" data-wow-delay="500ms">
+                            <img src="{{ asset('frontend/img/bg-img/7.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### About Us Area End ##### -->
+
+    <!-- ##### Pool Area Start ##### -->
+    <section class="pool-area section-padding-100 bg-img bg-fixed" style="background-image: url({{ asset('frontend/img/bg-img/4.png') }});">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-lg-7">
+                    <div class="pool-content text-center wow fadeInUp" data-wow-delay="300ms">
+                        <div class="section-heading text-center white">
+                            <div class="line-"></div>
+                            <h2>Infinity Pool</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum.</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-4">
+                                <div class="pool-feature">
+                                    <i class="icon-cocktail-1"></i>
+                                    <p>Pool Beachbar</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="pool-feature">
+                                    <i class="icon-swimming-pool"></i>
+                                    <p>Infinity Pool</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="pool-feature">
+                                    <i class="icon-beach"></i>
+                                    <p>Sunbeds</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <a href="#" class="btn palatin-btn mt-50">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Pool Area End ##### -->
+
+    <!-- ##### Rooms Area Start ##### -->
+    <section class="rooms-area section-padding-100-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="section-heading text-center">
+                        <div class="line-"></div>
+                        <h2>Choose a room</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- Single Rooms Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
+                        <!-- Thumbnail -->
+                        <div class="bg-thumbnail bg-img" style="background-image: url({{ asset('frontend/img/bg-img/1.jpg') }});"></div>
+                        <!-- Price -->
+                        <p class="price-from">From $150/night</p>
+                        <!-- Rooms Text -->
+                        <div class="rooms-text">
+                            <div class="line"></div>
+                            <h4>Deluxe Room</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                        </div>
+                        <!-- Book Room -->
+                        <a href="#" class="book-room-btn btn palatin-btn">Book Room</a>
+                    </div>
+                </div>
+
+                <!-- Single Rooms Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-rooms-area wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumbnail -->
+                        <div class="bg-thumbnail bg-img" style="background-image: url({{ asset('frontend/img/bg-img/8.jpg') }});"></div>
+                        <!-- Price -->
+                        <p class="price-from">From $150/night</p>
+                        <!-- Rooms Text -->
+                        <div class="rooms-text">
+                            <div class="line"></div>
+                            <h4>Double Suite</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                        </div>
+                        <!-- Book Room -->
+                        <a href="#" class="book-room-btn btn palatin-btn">Book Room</a>
+                    </div>
+                </div>
+
+                <!-- Single Rooms Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-rooms-area wow fadeInUp" data-wow-delay="500ms">
+                        <!-- Thumbnail -->
+                        <div class="bg-thumbnail bg-img" style="background-image: url({{ asset('frontend/img/bg-img/9.jpg') }});"></div>
+                        <!-- Price -->
+                        <p class="price-from">From $100/night</p>
+                        <!-- Rooms Text -->
+                        <div class="rooms-text">
+                            <div class="line"></div>
+                            <h4>Single Room</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+                        </div>
+                        <!-- Book Room -->
+                        <a href="#" class="book-room-btn btn palatin-btn">Book Room</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Rooms Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area d-flex flex-wrap align-items-center">
+        <div class="home-map-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22236.40558254599!2d-118.25292394686001!3d34.057682914027104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z4Kay4Ka4IOCmj-CmnuCnjeCmnOCnh-CmsuCnh-CmuCwg4KaV4KeN4Kav4Ka-4Kay4Ka_4Kar4KeL4Kaw4KeN4Kao4Ka_4Kav4Ka84Ka-LCDgpq7gpr7gprDgp43gppXgpr_gpqgg4Kav4KeB4KaV4KeN4Kak4Kaw4Ka-4Ka34KeN4Kaf4KeN4Kaw!5e0!3m2!1sbn!2sbd!4v1532328708137" allowfullscreen></iframe>
+        </div>
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
+                <div class="line-"></div>
+                <h2>Contact Info</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            </div>
+            <h4 class="wow fadeInUp" data-wow-delay="300ms">Los Angeles 1481 Creekside Lane Avila Beach, CA 931</h4>
+            <h5 class="wow fadeInUp" data-wow-delay="400ms">+53 345 7953 32453</h5>
+            <h5 class="wow fadeInUp" data-wow-delay="500ms">yourmail@gmail.com</h5>
+            <!-- Social Info -->
+            <div class="social-info mt-50 wow fadeInUp" data-wow-delay="600ms">
+                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-lg-5">
+                    <div class="footer-widget-area mt-50">
+                        <a href="#" class="d-block mb-5"><img src="{{ asset('frontend/img/core-img/logo.png') }}" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="footer-widget-area mt-50">
+                        <h6 class="widget-title mb-5">Find us on the map</h6>
+                        <img src="{{ asset('frontend/img/bg-img/footer-map.png') }}" alt="">
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="footer-widget-area mt-50">
+                        <h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Your E-mail">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Copywrite Text -->
+                <div class="col-12">
+                    <div class="copywrite-text mt-30">
+                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ asset('frontend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ asset('frontend/js/bootstrap/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ asset('frontend/js/bootstrap/bootstrap.min.js') }}"></script>
+    <!-- All Plugins js -->
+    <script src="{{ asset('frontend/js/plugins/plugins.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ asset('frontend/js/active.js') }}"></script>
+</body>
+
 </html>
+

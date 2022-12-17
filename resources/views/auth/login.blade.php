@@ -1,9 +1,15 @@
-@extends('layouts.app')
+@extends('frontend.layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container" style="height: 100vh" >
+
+    <div class="row justify-content-center  align-items-center h-100" >
+        <div class="col-md-8" >
+            <h3 class="text-center text-primary mb-5">Welcom From Hotem MS</h3>
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>If You Are New To Hotel Ms, Please Register First</strong>  <a class="mx-3 btn btn-info" href="{{ route('register') }}">{{ __('Create An Account') }}</a>
+
+              </div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -51,7 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-3">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
@@ -62,9 +68,23 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+
+                            </div>
+
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="ml-1 btn btn-primary" href="{{ url('auth/facebook') }}" style="margin-top: 0px !important;background: blue;color: #ffffff;padding: 5px;border-radius:4px;" id="btn-fblogin">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook
+                                </a>
+                                <a href="{{ url('auth/google') }}" >
+                                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="margin-left: 3em; ">
+                                </a>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
