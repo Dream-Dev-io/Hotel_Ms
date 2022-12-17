@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->string('icons');
-            $table->integer('rooms_no');
+            $table->string('icon');
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->date('check_in_date');
             $table->date('check_out_date');
-            $table->integer('rooms_no');
+            $table->integer('room_no');
             $table->date('arrival');
             $table->integer('user_id');
             $table->integer('guest_count');
